@@ -29,7 +29,7 @@ TEST_CASE("Observers", "[observers]") {
   REQUIRE(success);
   #endif
 
-  tl::expected<move_detector,int> o4{tl::in_place};
+  tl::expected<move_detector,int> o4{std::in_place};
   move_detector o5 = std::move(o4).value();
   REQUIRE(o4->been_moved);
   REQUIRE(!o5.been_moved);

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(tl-expected
   HOMEPAGE_URL https://tl.tartanllama.xyz
   DESCRIPTION "C++11/14/17 std::expected with functional-style extensions"
-  VERSION 1.0.1
+  VERSION 1.1.1
   LANGUAGES CXX)
 
 include(CMakePackageConfigHelpers)
@@ -11,7 +11,7 @@ include(GNUInstallDirs)
 include(CTest)
 
 if (NOT DEFINED CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 20)
 endif()
 
 option(EXPECTED_BUILD_PACKAGE "Build package files as well" ON)

@@ -28,7 +28,7 @@ struct willthrow_move {
 };
 #endif // TL_EXPECTED_EXCEPTIONS_ENABLED
 
-static_assert(tl::detail::is_swappable<no_throw>::value, "");
+static_assert(std::is_swappable_v<no_throw>);
 
 template <class T1, class T2> void swap_test() {
   std::string s1 = "abcdefghijklmnopqrstuvwxyz";
