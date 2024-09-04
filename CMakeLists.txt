@@ -8,7 +8,6 @@ project(tl-expected
 include(CMakePackageConfigHelpers)
 include(CMakeDependentOption)
 include(GNUInstallDirs)
-include(FetchContent)
 include(CTest)
 
 if (NOT DEFINED CMAKE_CXX_STANDARD)
@@ -67,9 +66,7 @@ if(EXPECTED_BUILD_TESTS)
   set(CATCH_INSTALL_HELPERS OFF)
   set(CATCH_BUILD_TESTING OFF)
   set(CATCH_INSTALL_DOCS OFF)
-  FetchContent_Declare(Catch2 URL
-    https://github.com/catchorg/Catch2/archive/v2.13.10.zip) 
-  FetchContent_MakeAvailable(Catch2)
+  add_subdirectory(extern/catch2)
 
   file(GLOB test-sources CONFIGURE_DEPENDS tests/*.cpp)
   list(FILTER test-sources EXCLUDE REGEX "tests/test.cpp")

@@ -8,5 +8,20 @@ CTestTestfile.cmake
 cmake_install.cmake
 tl-expected-config-version.cmake
 tl-expected-config.cmake
+/cmake-build-*
+
+# IDE
+/.idea/
+/.vscode/
+/.vs/
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.suo
+*.ncb
+*.sdf
+*.xpt
+*.user
 
 Makefile
